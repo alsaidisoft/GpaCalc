@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">حاسبة المعدل التراكمي</string>
+    <string name="calculate">احسب المعدل</string>
+    <string name="developer">المطور</string>
+    <string name="info">معلومات</string>
+    <string name="share">مشاركة</string>
+    <string name="rate">قيمنا</string>
+    <string name="contact_us">تواصل معنا</string>
+    <string name="calc_info">يقوم البرنامج بحساب المعدل التراكمي وفقا للنموذج التالي:\n
+         A=4\n
+         A-=3.7\n
+         B+=3.3\n
+         B=3\n
+         B-=2.7\n
+         C+=2.3\n
+         C=2\n
+         C-=1.7\n
+         D+=1.3\n
+         D=1\n
+         F=0\n
+    </string>
+    <string name="ok">حسنا</string>
+    <string name="choose_num_of_course">اختر عدد المواد:</string>
+    <string name="app_dev">AlsaidiSoft</string>
+    <string name="send_to">أرسل إلى:</string>
+    <string name="your_semester_gpa">معدلك الفصلي:</string>
+    <string name="total_hours">مجموع الساعات: </string>
+    <string name="fill_blanks">إملأ الحقول المطلوبة</string>
+    <string name="enjoy_app">إذا كنت تستمتع بتطبيقنا، الرجاء أخذ لحضة لتقييمنا:</string>
+    <string name="download">قم بتحميل تطبيقنا عن طريق الرابط:</string>
+    <string name="degree">الدرجة:</string>
+    <string name="hours">الساعات:</string>
+    <string name="semester_gpa">المعدل التراكمي الفصلي</string>
+    <string name="comulative_gpa">لحساب المعدل التراكمي الكلي، أدخل مجموع الساعات والمعدل التراكمي الفصلي</string>
+    <string name="total_before_semester_hours">مجموع الساعات قبل هذا الفصل:</string>
+    <string name="total_before_semester_gpa">المعدل التراكمي قبل هذا الفصل:</string>
+    <string name="total_comulative_gpa">المعدل التراكمي الكلي</string>
+    <string name="num_course">عدد المواد المختاره: </string>
+    <string name="excellent">\nمستواك العام هو: ممتاز</string>
+    <string name="very_good">\nمستواك العام هو: جيد جدا</string>
+    <string name="good">\nمستواك العام هو: جيد</string>
+    <string name="acceptable">\nمستواك العام هو: مقبول</string>
+    <string name="under_observation">\nمستواك العام هو: تحت الملاحظة</string>
+    <string name="general_gpa">المعدل التراكمي:</string>
+    <string name="point_average">المعدل التراكمي الكلي لهذه السنة: </string>
+    <string name="token_hours">\nمجموع الساعات التي أخذتها: </string>
+    <string name="repetedCourseDegree">الدرجة سابقا:</string>
+    <string name="degreeAfterRepeated">درجة الإعادة:</string>
+    <string name="big_gpa">المعدل أكبر من 4.0، يجب أن يكون في حدود 4.0</string>
+    <string name="repeated">حساب المعدل في حالة إعادة المواد</string>
+</resources>

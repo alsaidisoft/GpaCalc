@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GPA Calculator</string>
+   <string name="calculate">Calculate</string>
+    <string name="developer">Developer</string>
+    <string name="info">Calc info</string>
+    <string name="share">Share</string>
+    <string name="rate">Rate us</string>
+    <string name="contact_us">Contact us</string>
+    <string name="calc_info">This app calculate GPA according to below criteria:\n
+         A=4\n
+         A-=3.7\n
+         B+=3.3\n
+         B=3\n
+         B-=2.7\n
+         C+=2.3\n
+         C=2\n
+         C-=1.7\n
+         D+=1.3\n
+         D=1\n
+         F=0\n</string>
+    <string name="ok">Ok</string>
+    <string name="choose_num_of_course">Choose number of courses:</string>
+    <string name="app_dev">AlsaidiSoft</string>
+    <string name="send_to">Send to:</string>
+    <string name="your_semester_gpa">Your semester Gpa:</string>
+    <string name="total_hours">Total hours: </string>
+    <string name="fill_blanks">Fill blanks</string>
+    <string name="enjoy_app">If You enjoy our app, please take a second to rate it:</string>
+    <string name="download">Download our app via the link:</string>
+    <string name="degree">Degree:</string>
+    <string name="hours">Hours:</string>
+    <string name="semester_gpa">Semester Gpa</string>
+    <string name="comulative_gpa">To calculate cumulative Gpa, enter total hours and Gpa before this semester:</string>
+    <string name="total_before_semester_hours">Total hours:</string>
+    <string name="total_before_semester_gpa">Total Gpa:</string>
+    <string name="total_comulative_gpa">Cumulative Gpa</string>
+    <string name="num_course">Number of chosen courses: </string>
+    <string name="excellent">\nYour level is: Excellent</string>
+    <string name="very_good">\nYour level is: Very good</string>
+    <string name="good">\nYour level is: Good</string>
+    <string name="acceptable">\nYour level is: Acceptable</string>
+    <string name="under_observation">\nYour level is: under observation</string>
+    <string name="general_gpa">General GPA:</string>
+    <string name="point_average">Point Average cumulative year is: </string>
+    <string name="token_hours">\nTotal hours that took: </string>
+    <string name="repetedCourseDegree">Degree before:</string>
+    <string name="degreeAfterRepeated">Degree after:</string>
+    <string name="big_gpa">Error, Gpa bigger than 4.0!</string>
+    <string name="repeated">Calculate Gpa after repeated courses</string>
+
+
+</resources>
