@@ -4,4 +4,4 @@ GPA calculator, first app that I developed when I was student at college of appl
 The app is a new version of the first app and available in the google play. 
 
 Developer: 
-#AlsaidiSoft
+# AlsaidiSoft
