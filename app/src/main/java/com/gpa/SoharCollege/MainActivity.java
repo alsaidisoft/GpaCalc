@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent share = new Intent(Intent.ACTION_SEND);
                 String msg = getResources().getString(R.string.download)+
                         "\n" +
-                        "https://play.google.com/store/apps/details?id="+"com.gpa.e007";
+                        "https://play.google.com/store/apps/details?id="+"com.gpa.SoharCollege";
                 share.putExtra(Intent.EXTRA_TEXT, msg);
                 share.setType("text/plain");
                 startActivity(Intent.createChooser(share, getResources().getText(R.string.send_to)));
@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("market://details?id=" + "com.gpa.e007"));
+                intent.setData(Uri.parse("market://details?id=" + "com.gpa.SoharCollege"));
                 startActivity(intent);
             }
         });
