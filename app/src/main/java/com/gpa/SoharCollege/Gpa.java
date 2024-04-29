@@ -232,7 +232,7 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 				hours7.setVisibility(View.GONE);
 				break;
 			case 7:
-
+				break;
 			default:
 				Toast.makeText(getApplicationContext(),"There is error, try again!",Toast.LENGTH_LONG).show();
 				break;
