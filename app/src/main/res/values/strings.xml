@@ -50,4 +50,5 @@
     <string name="degreeAfterRepeated">درجة الإعادة:</string>
     <string name="big_gpa">المعدل أكبر من 4.0، يجب أن يكون في حدود 4.0</string>
     <string name="repeated">حساب المعدل في حالة إعادة المواد</string>
+    <string name="how_many_courses_repeated">عدد المواد المعاده:</string>
 </resources>

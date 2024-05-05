@@ -85,24 +85,45 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder b = new AlertDialog.Builder(MainActivity.this);
                 b.setTitle(R.string.choose_num_of_course);
-                String[] types = {"1", "2","3","4","5","6","7",getResources().getString(R.string.repeated)};
+                String[] types = {"1", "2","3","4","5","6","7","8","9","10",getResources().getString(R.string.repeated)};
                 b.setItems(types, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
 
                         dialog.dismiss();
-                        if(which == 7){
-                            Intent open = new Intent(MainActivity.this, RepeatedCourses.class);
-                            open.setFlags(FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(open);
+                        Intent open;
+                        if(which == 10){
+                            AlertDialog.Builder r = new AlertDialog.Builder(MainActivity.this);
+                            r.setTitle(R.string.how_many_courses_repeated);
+                            String[] rtypes = {"1", "2","3","4","5","6","7"};
+                            r.setItems(rtypes, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int rwhich) {
+
+                                    int rcourse = 1+rwhich;
+                                    Intent ropen = new Intent(MainActivity.this, RepeatedCourses.class);
+                                    ropen.setFlags(FLAG_ACTIVITY_NEW_TASK);
+                                    ropen.putExtra("Courses", rcourse + "");
+                                    startActivity(ropen);
+                                    dialog.dismiss();
+
+
+
+                                }
+
+                            });
+
+                            r.show();
+
                         }
                         else {
-                            Intent open = new Intent(MainActivity.this, Gpa.class);
+                            open = new Intent(MainActivity.this, Gpa.class);
                             open.setFlags(FLAG_ACTIVITY_NEW_TASK);
                             int course = which + 1;
                             open.putExtra("Courses", course + "");
                             startActivity(open);
+
                         }
 
 

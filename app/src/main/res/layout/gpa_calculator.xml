@@ -78,6 +78,24 @@
                     android:layout_height="wrap_content"
                      android:textAlignment="center"
                      android:layout_margin="2dp"/>
+                <Spinner
+                    android:id="@+id/spinner15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="2dp"/>
+                <Spinner
+                    android:id="@+id/spinner17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="2dp"/>
+                <Spinner
+                    android:id="@+id/spinner19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="2dp"/>
 
                 
             </LinearLayout>
@@ -149,6 +167,24 @@
                     android:layout_height="wrap_content"
                      android:textAlignment="center"
                      android:layout_margin="2dp"/>
+                <Spinner
+                    android:id="@+id/spinner16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="2dp"/>
+                <Spinner
+                    android:id="@+id/spinner18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="2dp"/>
+                <Spinner
+                    android:id="@+id/spinner20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="2dp"/>
 
                
             </LinearLayout>

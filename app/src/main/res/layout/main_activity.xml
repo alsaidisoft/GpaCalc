@@ -189,6 +189,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -201,9 +202,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:id="@+id/contact_us"
-                    android:text="@string/contact_us"
                     android:layout_below="@+id/img6"
+                    android:text="@string/contact_us"
                     android:layout_centerHorizontal="true"/>
+
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>

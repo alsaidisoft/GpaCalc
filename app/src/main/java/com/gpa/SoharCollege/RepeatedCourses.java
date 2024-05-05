@@ -1,9 +1,12 @@
 package com.gpa.SoharCollege;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -34,38 +37,9 @@ import java.util.Locale;
 
 public class RepeatedCourses extends AppCompatActivity implements OnItemSelectedListener {
 
-	double dg1;
-	double dg2;
-	double dg3;
-	double dg4;
-	double dg5;
-	double dg6;
-	double dg7;
+	double dg1,dg2,dg3,dg4,dg5,dg6,dg7;
 
-	double af1;
-	double af2;
-	double af3;
-	double af4;
-	double af5;
-	double af6;
-	double af7;
-
-
-	boolean dgr1 = true;
-	boolean dgr2 = true;
-	boolean dgr3 = true;
-	boolean dgr4 = true;
-	boolean dgr5 = true;
-	boolean dgr6 = true;
-	boolean dgr7 = true;
-
-	boolean aft1 = true;
-	boolean aft2 = true;
-	boolean aft3 = true;
-	boolean aft4 = true;
-	boolean aft5 = true;
-	boolean aft6 = true;
-	boolean aft7 = true;
+	double af1,af2,af3,af4,af5,af6,af7;
 
 	double affirst = 0;
 	double afsecond = 0;
@@ -76,22 +50,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 	double afseven = 0;
 
 
-	int hu1;
-	int hu2;
-	int hu3;
-	int hu4;
-	int hu5;
-	int hu6;
-	int hu7;
-
-	boolean huo1 = true;
-	boolean huo2 = true;
-	boolean huo3 = true;
-	boolean huo4 = true;
-	boolean huo5 = true;
-	boolean huo6 = true;
-	boolean huo7 = true;
-
+	int hu1,hu2,hu3,hu4,hu5,hu6,hu7;
 
 	double first = 0;
 	double second = 0;
@@ -103,18 +62,15 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 	int hsum;
 
-	double sum;
-	double gpa;
-	double credits;
-	double points;
-	double totalsum;
+	double sum,gpa,credits,points,totalsum;
 
 	int totalHourses;
 	double genralNewGpa;
-	GeneralFunctions gn = new GeneralFunctions();
 	TextView txt1, txt2, txt3, txt4, txt5,txt6;
 	Button btn1;
+	int course = 0;
 
+	GeneralFunctions gn = new GeneralFunctions();
 
 
 	@Override
@@ -131,6 +87,9 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 			System.out.println("_______" + e.getMessage() + "___________________");
 		}
 
+		Bundle bundle = getIntent().getExtras();
+		final String courses = bundle.getString("Courses");
+		course = Integer.parseInt(courses);
 
 		txt1 = (TextView) findViewById(R.id.textView1);
 		txt2 = (TextView) findViewById(R.id.textView2);
@@ -215,7 +174,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 		final List<String> hourses = new ArrayList<String>();
 
-		hourses.add("0");
+		hourses.add("1");
 		hourses.add("2");
 		hourses.add("3");
 		hourses.add("4");
@@ -238,7 +197,6 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 		//create list for degrees before repeated
 		final List<String> degrees = new ArrayList<String>();
-		degrees.add("0");
 		degrees.add("A");
 		degrees.add("A-");
 		degrees.add("B+");
@@ -268,7 +226,6 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 		//create list for repeated courses
 
 		final List<String> repeated = new ArrayList<String>();
-		repeated.add("0");
 		repeated.add("A");
 		repeated.add("A-");
 		repeated.add("B+");
@@ -294,6 +251,90 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 		after6.setAdapter(repeatAdapter);
 		after7.setAdapter(repeatAdapter);
 
+		switch (course) {
+			case 1:
+				degree2.setVisibility(View.GONE);
+				hours2.setVisibility(View.GONE);
+				degree3.setVisibility(View.GONE);
+				hours3.setVisibility(View.GONE);
+				degree4.setVisibility(View.GONE);
+				hours4.setVisibility(View.GONE);
+				degree5.setVisibility(View.GONE);
+				hours5.setVisibility(View.GONE);
+				degree6.setVisibility(View.GONE);
+				hours6.setVisibility(View.GONE);
+				degree7.setVisibility(View.GONE);
+				hours7.setVisibility(View.GONE);
+				after2.setVisibility(View.GONE);
+				after3.setVisibility(View.GONE);
+				after4.setVisibility(View.GONE);
+				after5.setVisibility(View.GONE);
+				after6.setVisibility(View.GONE);
+				after7.setVisibility(View.GONE);
+				break;
+			case 2:
+				degree3.setVisibility(View.GONE);
+				hours3.setVisibility(View.GONE);
+				degree4.setVisibility(View.GONE);
+				hours4.setVisibility(View.GONE);
+				degree5.setVisibility(View.GONE);
+				hours5.setVisibility(View.GONE);
+				degree6.setVisibility(View.GONE);
+				hours6.setVisibility(View.GONE);
+				degree7.setVisibility(View.GONE);
+				hours7.setVisibility(View.GONE);
+				after3.setVisibility(View.GONE);
+				after4.setVisibility(View.GONE);
+				after5.setVisibility(View.GONE);
+				after6.setVisibility(View.GONE);
+				after7.setVisibility(View.GONE);
+				break;
+			case 3:
+				degree4.setVisibility(View.GONE);
+				hours4.setVisibility(View.GONE);
+				degree5.setVisibility(View.GONE);
+				hours5.setVisibility(View.GONE);
+				degree6.setVisibility(View.GONE);
+				hours6.setVisibility(View.GONE);
+				degree7.setVisibility(View.GONE);
+				hours7.setVisibility(View.GONE);
+				after4.setVisibility(View.GONE);
+				after5.setVisibility(View.GONE);
+				after6.setVisibility(View.GONE);
+				after7.setVisibility(View.GONE);
+				break;
+			case 4:
+				degree5.setVisibility(View.GONE);
+				hours5.setVisibility(View.GONE);
+				degree6.setVisibility(View.GONE);
+				hours6.setVisibility(View.GONE);
+				degree7.setVisibility(View.GONE);
+				hours7.setVisibility(View.GONE);
+				after5.setVisibility(View.GONE);
+				after6.setVisibility(View.GONE);
+				after7.setVisibility(View.GONE);
+				break;
+			case 5:
+				degree6.setVisibility(View.GONE);
+				hours6.setVisibility(View.GONE);
+				degree7.setVisibility(View.GONE);
+				hours7.setVisibility(View.GONE);
+				after6.setVisibility(View.GONE);
+				after7.setVisibility(View.GONE);
+				break;
+			case 6:
+				degree7.setVisibility(View.GONE);
+				hours7.setVisibility(View.GONE);
+				after7.setVisibility(View.GONE);
+				break;
+			case 7:
+				break;
+			default:
+				Toast.makeText(getApplicationContext(),"There is error, try again!",Toast.LENGTH_LONG).show();
+				break;
+
+
+		}
 		Button mainbutton = (Button) findViewById(R.id.button1);
 		//implement GPA calculation
 		mainbutton.setOnClickListener(new View.OnClickListener() {
@@ -302,26 +343,157 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 			@Override
 			public void onClick(View v) {
 
-				first = dg1 * hu1;
+				if(course ==1) {
 
-				second = dg2 * hu2;
+					totalHourses -=hu1;
+					first = dg1 * hu1;
+					sum = first;
+					hsum = hu1;
+					gpa = sum / hsum;
+					affirst = first - (af1 * hu1);
+					totalsum = affirst;
 
-				third = dg3 * hu3;
+				}
+				if(course == 2) {
+					totalHourses -=hu1;
+					totalHourses -=hu2;
 
-				forth = dg4 * hu4;
+					first = dg1 * hu1;
+					second = dg2 * hu2;
+					sum = first+second;
+					hsum = hu1 + hu2;
 
-				fivee = dg5 * hu5;
+					gpa = sum / hsum;
+					affirst = first - (af1 * hu1);
+					afsecond = second - (af2 * hu2);
+					totalsum = affirst+ afsecond;
 
-				sixth = dg6 * hu6;
+				}
 
-				seven = dg7 * hu7;
+				if(course == 3){
+					totalHourses -=hu1;
+					totalHourses -=hu2;
+					totalHourses -=hu3;
+					first = dg1 * hu1;
+					second = dg2 * hu2;
+					third = dg3 * hu3;
+					sum = first+second+third;
+					hsum = hu1 + hu2 + hu3;
+
+					gpa = sum / hsum;
+					affirst = first - (af1 * hu1);
+					afsecond = second - (af2 * hu2);
+					afthird = third - (af3 * hu3);
+					totalsum = affirst+ afsecond+afthird;
+
+				}
+
+				if(course == 4){
+					totalHourses -=hu1;
+					totalHourses -=hu2;
+					totalHourses -=hu3;
+					totalHourses -=hu4;
+					first = dg1 * hu1;
+					second = dg2 * hu2;
+					third = dg3 * hu3;
+					forth = dg4 * hu4;
+
+					sum = first+second+third+forth;
+					hsum = hu1 + hu2 + hu3 + hu4;
+
+					gpa = sum / hsum;
+					affirst = first - (af1 * hu1);
+					afsecond = second - (af2 * hu2);
+					afthird = third - (af3 * hu3);
+					afforth = forth - (af4 * hu4);
+					totalsum = affirst+ afsecond+afthird+ afforth;
+
+				}
+
+				if(course == 5){
+					totalHourses -=hu1;
+					totalHourses -=hu2;
+					totalHourses -=hu3;
+					totalHourses -=hu4;
+					totalHourses -=hu5;
+					first = dg1 * hu1;
+					second = dg2 * hu2;
+					third = dg3 * hu3;
+					forth = dg4 * hu4;
+					fivee = dg5 * hu5;
+
+					sum = first+second+third+forth+fivee;
+					hsum = hu1 + hu2 + hu3 + hu4 + hu5;
+
+					gpa = sum / hsum;
+					affirst = first - (af1 * hu1);
+					afsecond = second - (af2 * hu2);
+					afthird = third - (af3 * hu3);
+					afforth = forth - (af4 * hu4);
+					affifth = fivee - (af5 * hu5);
+					totalsum = affirst+ afsecond+afthird+ afforth+affifth;
+
+				}
+
+				if(course == 6){
+					totalHourses -=hu1;
+					totalHourses -=hu2;
+					totalHourses -=hu3;
+					totalHourses -=hu4;
+					totalHourses -=hu5;
+					totalHourses -=hu6;
+
+					first = dg1 * hu1;
+					second = dg2 * hu2;
+					third = dg3 * hu3;
+					forth = dg4 * hu4;
+					fivee = dg5 * hu5;
+					sixth = dg6 * hu6;
+
+					sum = first+second+third+forth+fivee+sixth;
+					hsum = hu1 + hu2 + hu3 + hu4 + hu5 + hu6;
+
+					gpa = sum / hsum;
+					affirst = first - (af1 * hu1);
+					afsecond = second - (af2 * hu2);
+					afthird = third - (af3 * hu3);
+					afforth = forth - (af4 * hu4);
+					affifth = fivee - (af5 * hu5);
+					afsixth = sixth - (af6 * hu6);
+					totalsum = affirst+ afsecond+afthird+ afforth+affifth+afsixth;
+				}
+
+				if(course == 7){
+					totalHourses -=hu1;
+					totalHourses -=hu2;
+					totalHourses -=hu3;
+					totalHourses -=hu4;
+					totalHourses -=hu5;
+					totalHourses -=hu6;
+					totalHourses -=hu7;
+
+					first = dg1 * hu1;
+					second = dg2 * hu2;
+					third = dg3 * hu3;
+					forth = dg4 * hu4;
+					fivee = dg5 * hu5;
+					sixth = dg6 * hu6;
+					seven = dg7 * hu7;
+					sum = gn.Sum(first, second, third, forth, fivee, sixth, seven);
+					hsum = hu1 + hu2 + hu3 + hu4 + hu5 + hu6 + hu7;
 
 
-				hsum = hu1 + hu2 + hu3 + hu4 + hu5 + hu6 + hu7;
-				sum = gn.Sum(first, second, third, forth, fivee, sixth, seven);
-
-				gpa = sum / hsum;
-
+					gpa = sum / hsum;
+					affirst = first - (af1 * hu1);
+					afsecond = second - (af2 * hu2);
+					afthird = third - (af3 * hu3);
+					afforth = forth - (af4 * hu4);
+					affifth = fivee - (af5 * hu5);
+					afsixth = sixth - (af6 * hu6);
+					afseven = seven - (af7 * hu7);
+					totalsum =
+							gn.Sum(affirst, afsecond, afthird, afforth, affifth, afsixth, afseven);
+				}
 
 				try {
 
@@ -332,16 +504,6 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 					String totalHoursint = totalHours.getText().toString();
 					double totalH = Double.parseDouble(totalHoursint);
 					if (totalG <= 4.0) {
-						affirst = first - (af1 * hu1);
-						afsecond = second - (af2 * hu2);
-						afthird = third - (af3 * hu3);
-						afforth = forth - (af4 * hu4);
-						affifth = fivee - (af5 * hu5);
-						afsixth = sixth - (af6 * hu6);
-						afseven = seven - (af7 * hu7);
-
-						totalsum =
-								gn.Sum(affirst, afsecond, afthird, afforth, affifth, afsixth, afseven);
 
 						points = totalG * totalH;
 						points += totalsum;
@@ -373,7 +535,10 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 						totgpa.setTitle(R.string.general_gpa);
 						d.setMaximumFractionDigits(2);
 						int cr = (int) (credits);
-						totgpa.setMessage(getResources().getString(R.string.your_semester_gpa) + d.format(gpa) + "\n"+getResources().getString(R.string.total_hours) + hsum + "\n"+getResources().getString(R.string.general_gpa) + d.format(genralNewGpa) + msg + "\n"+getResources().getString(R.string.total_hours) + cr);
+						int th = Math.abs(totalHourses);
+						int th_cr= cr+th;
+						String masg = getResources().getString(R.string.your_semester_gpa) + d.format(gpa) + "\n"+getResources().getString(R.string.total_hours) + hsum + "\n"+getResources().getString(R.string.general_gpa) + d.format(genralNewGpa) + msg + "\n"+getResources().getString(R.string.total_hours) + th_cr;
+						totgpa.setMessage(masg);
 
 						totgpa.setButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener() {
 
@@ -386,59 +551,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 								credits = 0;
 								sum = 0;
 								hsum = 0;
-
-
-								degree1.setSelection(0);
-								degree2.setSelection(0);
-								degree3.setSelection(0);
-								degree4.setSelection(0);
-								degree5.setSelection(0);
-								degree6.setSelection(0);
-								degree7.setSelection(0);
-
-								hours1.setSelection(0);
-								hours2.setSelection(0);
-								hours3.setSelection(0);
-								hours4.setSelection(0);
-								hours5.setSelection(0);
-								hours6.setSelection(0);
-								hours7.setSelection(0);
-
-								after1.setSelection(0);
-								after2.setSelection(0);
-								after3.setSelection(0);
-								after4.setSelection(0);
-								after5.setSelection(0);
-								after6.setSelection(0);
-								after7.setSelection(0);
-
-								af1 = 0;
-								af2 = 0;
-								af3 = 0;
-								af4 = 0;
-								af5 = 0;
-								af6 = 0;
-								af7 = 0;
-
-								dg1 = 0;
-								dg2 = 0;
-								dg3 = 0;
-								dg4 = 0;
-								dg5 = 0;
-								dg6 = 0;
-								dg7 = 0;
-
-								hu1 = 0;
-								hu2 = 0;
-								hu3 = 0;
-								hu4 = 0;
-								hu5 = 0;
-								hu6 = 0;
-								hu7 = 0;
-
-								totalHours.setText("");
-								totalGpa.setText("");
-
+								totalsum = 0;
 								ok.cancel();
 							}
 						});
@@ -465,7 +578,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner1:
 				String h1 = parent.getItemAtPosition(position).toString();
-				if (h1.equals("0")) huo1 = false;
+				 if (h1.equals("1")) hu1 = 1;
 				else if (h1.equals("2")) hu1 = 2;
 				else if (h1.equals("3")) hu1 = 3;
 				else if (h1.equals("4")) hu1 = 4;
@@ -474,7 +587,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner4:
 				String h2 = parent.getItemAtPosition(position).toString();
-				if (h2.equals("0")) huo2 = false;
+				 if (h2.equals("1")) hu2 = 1;
 				else if (h2.equals("2")) hu2 = 2;
 				else if (h2.equals("3")) hu2 = 3;
 				else if (h2.equals("4")) hu2 = 4;
@@ -483,7 +596,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner7:
 				String h3 = parent.getItemAtPosition(position).toString();
-				if (h3.equals("0")) huo3 = false;
+				 if (h3.equals("1")) hu3 = 1;
 				else if (h3.equals("2")) hu3 = 2;
 				else if (h3.equals("3")) hu3 = 3;
 				else if (h3.equals("4")) hu3 = 4;
@@ -492,7 +605,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner10:
 				String h4 = parent.getItemAtPosition(position).toString();
-				if (h4.equals("0")) huo4 = false;
+				 if (h4.equals("1")) hu4 = 1;
 				else if (h4.equals("2")) hu4 = 2;
 				else if (h4.equals("3")) hu4 = 3;
 				else if (h4.equals("4")) hu4 = 4;
@@ -501,7 +614,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner13:
 				String h5 = parent.getItemAtPosition(position).toString();
-				if (h5.equals("0")) huo5 = false;
+				 if (h5.equals("1")) hu5 = 1;
 				else if (h5.equals("2")) hu5 = 2;
 				else if (h5.equals("3")) hu5 = 3;
 				else if (h5.equals("4")) hu5 = 4;
@@ -510,7 +623,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner16:
 				String h6 = parent.getItemAtPosition(position).toString();
-				if (h6.equals("0")) huo6 = false;
+				 if (h6.equals("1")) hu6 = 1;
 				else if (h6.equals("2")) hu6 = 2;
 				else if (h6.equals("3")) hu6 = 3;
 				else if (h6.equals("4")) hu6 = 4;
@@ -518,7 +631,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				break;
 			case R.id.spinner19:
 				String h7 = parent.getItemAtPosition(position).toString();
-				if (h7.equals("0")) huo1 = false;
+				 if (h7.equals("1")) hu7 = 1;
 				else if (h7.equals("2")) hu7 = 2;
 				else if (h7.equals("3")) hu7 = 3;
 				else if (h7.equals("4")) hu7 = 4;
@@ -527,8 +640,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner2:
 				String d1 = parent.getItemAtPosition(position).toString();
-				if (d1.equals("0")) dgr1 = false;
-				else if (d1.equals("A")) dg1 = 4;
+				 if (d1.equals("A")) dg1 = 4;
 				else if (d1.equals("A-")) dg1 = 3.7;
 				else if (d1.equals("B+")) dg1 = 3.3;
 				else if (d1.equals("B")) dg1 = 3;
@@ -543,8 +655,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner5:
 				String d2 = parent.getItemAtPosition(position).toString();
-				if (d2.equals("0")) dgr2 = false;
-				else if (d2.equals("A")) dg2 = 4;
+				 if (d2.equals("A")) dg2 = 4;
 				else if (d2.equals("A-")) dg2 = 3.7;
 				else if (d2.equals("B+")) dg2 = 3.3;
 				else if (d2.equals("B")) dg2 = 3;
@@ -559,8 +670,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner8:
 				String d3 = parent.getItemAtPosition(position).toString();
-				if (d3.equals("0")) dgr3 = false;
-				else if (d3.equals("A")) dg3 = 4;
+				 if (d3.equals("A")) dg3 = 4;
 				else if (d3.equals("A-")) dg3 = 3.7;
 				else if (d3.equals("B+")) dg3 = 3.3;
 				else if (d3.equals("B")) dg3 = 3;
@@ -574,8 +684,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				break;
 			case R.id.spinner11:
 				String d4 = parent.getItemAtPosition(position).toString();
-				if (d4.equals("0")) dgr4 = false;
-				else if (d4.equals("A")) dg4 = 4;
+				 if (d4.equals("A")) dg4 = 4;
 				else if (d4.equals("A-")) dg4 = 3.7;
 				else if (d4.equals("B+")) dg4 = 3.3;
 				else if (d4.equals("B")) dg4 = 3;
@@ -589,8 +698,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				break;
 			case R.id.spinner14:
 				String d5 = parent.getItemAtPosition(position).toString();
-				if (d5.equals("0")) dgr5 = false;
-				else if (d5.equals("A")) dg5 = 4;
+				 if (d5.equals("A")) dg5 = 4;
 				else if (d5.equals("A-")) dg5 = 3.7;
 				else if (d5.equals("B+")) dg5 = 3.3;
 				else if (d5.equals("B")) dg5 = 3;
@@ -605,8 +713,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner17:
 				String d6 = parent.getItemAtPosition(position).toString();
-				if (d6.equals("0")) dgr6 = false;
-				else if (d6.equals("A")) dg6 = 4;
+				 if (d6.equals("A")) dg6 = 4;
 				else if (d6.equals("A-")) dg6 = 3.7;
 				else if (d6.equals("B+")) dg6 = 3.3;
 				else if (d6.equals("B")) dg6 = 3;
@@ -621,8 +728,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner20:
 				String d7 = parent.getItemAtPosition(position).toString();
-				if (d7.equals("0")) dgr7 = false;
-				else if (d7.equals("A")) dg7 = 4;
+				 if (d7.equals("A")) dg7 = 4;
 				else if (d7.equals("A-")) dg7 = 3.7;
 				else if (d7.equals("B+")) dg7 = 3.3;
 				else if (d7.equals("B")) dg7 = 3;
@@ -637,13 +743,6 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 
 			case R.id.spinner3:
 				String a1 = parent.getItemAtPosition(position).toString();
-
-				if (a1.equals("0")) {
-					aft1 = false;
-				} else {
-					totalHourses -= hu1;
-				}
-
 				if (a1.equals("A")) af1 = 4;
 				else if (a1.equals("A-")) af1 = 3.7;
 				else if (a1.equals("B+")) af1 = 3.3;
@@ -658,12 +757,6 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				break;
 			case R.id.spinner6:
 				String a2 = parent.getItemAtPosition(position).toString();
-
-				if (a2.equals("0")) {
-					aft2 = false;
-				} else {
-					totalHourses -= hu2;
-				}
 				if (a2.equals("A")) af2 = 4;
 				else if (a2.equals("A-")) af2 = 3.7;
 				else if (a2.equals("B+")) af2 = 3.3;
@@ -678,12 +771,6 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				break;
 			case R.id.spinner9:
 				String a3 = parent.getItemAtPosition(position).toString();
-
-				if (a3.equals("0")) {
-					aft3 = false;
-				} else {
-					totalHourses -= hu3;
-				}
 				if (a3.equals("A")) af3 = 4;
 				else if (a3.equals("A-")) af3 = 3.7;
 				else if (a3.equals("B+")) af3 = 3.3;
@@ -699,12 +786,6 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 			case R.id.spinner12:
 
 				String a4 = parent.getItemAtPosition(position).toString();
-				if (a4.equals("0")) {
-					aft4 = false;
-				} else {
-					totalHourses -= hu4;
-				}
-
 				if (a4.equals("A")) af4 = 4;
 				else if (a4.equals("A-")) af4 = 3.7;
 				else if (a4.equals("B+")) af4 = 3.3;
@@ -719,13 +800,6 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				break;
 			case R.id.spinner15:
 				String a5 = parent.getItemAtPosition(position).toString();
-
-				if (a5.equals("0")) {
-					aft5 = false;
-				} else {
-					totalHourses -= hu5;
-				}
-
 				if (a5.equals("A")) af5 = 4;
 				else if (a5.equals("A-")) af5 = 3.7;
 				else if (a5.equals("B+")) af5 = 3.3;
@@ -740,13 +814,6 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				break;
 			case R.id.spinner18:
 				String a6 = parent.getItemAtPosition(position).toString();
-
-				if (a6.equals("0")) {
-					aft6 = false;
-				} else {
-					totalHourses -= hu6;
-				}
-
 				if (a6.equals("A")) af6 = 4;
 				else if (a6.equals("A-")) af6 = 3.7;
 				else if (a6.equals("B+")) af6 = 3.3;
@@ -761,13 +828,6 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				break;
 			case R.id.spinner21:
 				String a7 = parent.getItemAtPosition(position).toString();
-
-				if (a7.equals("0")) {
-					aft7 = false;
-				} else {
-					totalHourses -= hu7;
-				}
-
 				if (a7.equals("A")) af7 = 4;
 				else if (a7.equals("A-")) af7 = 3.7;
 				else if (a7.equals("B+")) af7 = 3.3;

@@ -29,9 +29,9 @@ import java.util.Locale;
 
 public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 	
-	double dg1,dg2,dg3,dg4,dg5,dg6,dg7;
-	int hu1,hu2,hu3,hu4,hu5,hu6,hu7,hsum;
-	double first,second,third,forth,fivee,sixth,sevnth;
+	double dg1,dg2,dg3,dg4,dg5,dg6,dg7,dg8,dg9,dg10;
+	int hu1,hu2,hu3,hu4,hu5,hu6,hu7,hu8,hu9,hu10,hsum;
+	double first,second,third,forth,fivee,sixth,sevnth,eigth,nine,ten;
 	double sum;
 	double gpa;
 	double credits;
@@ -105,6 +105,12 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 		Spinner hours6=(Spinner)findViewById(R.id.spinner12);
 		Spinner degree7=(Spinner)findViewById(R.id.spinner13);
 		Spinner hours7=(Spinner)findViewById(R.id.spinner14);
+		Spinner degree8=(Spinner)findViewById(R.id.spinner15);
+		Spinner hours8=(Spinner)findViewById(R.id.spinner16);
+		Spinner degree9=(Spinner)findViewById(R.id.spinner17);
+		Spinner hours9=(Spinner)findViewById(R.id.spinner18);
+		Spinner degree10=(Spinner)findViewById(R.id.spinner19);
+		Spinner hours10=(Spinner)findViewById(R.id.spinner20);
 
 
 		
@@ -115,7 +121,10 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 		degree5.setOnItemSelectedListener(this);
 		degree6.setOnItemSelectedListener(this);
 		degree7.setOnItemSelectedListener(this);
-		
+		degree8.setOnItemSelectedListener(this);
+		degree9.setOnItemSelectedListener(this);
+		degree10.setOnItemSelectedListener(this);
+
 		hours1.setOnItemSelectedListener(this);
 		hours2.setOnItemSelectedListener(this);
 		hours3.setOnItemSelectedListener(this);
@@ -123,10 +132,14 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 		hours5.setOnItemSelectedListener(this);
 		hours6.setOnItemSelectedListener(this);
 		hours7.setOnItemSelectedListener(this);
-		
+		hours8.setOnItemSelectedListener(this);
+		hours9.setOnItemSelectedListener(this);
+		hours10.setOnItemSelectedListener(this);
+
 		// spinner drop down hours
 		List<String> hours=new ArrayList<String>();
-        hours.add("2");
+		hours.add("1");
+		hours.add("2");
         hours.add("3");
         hours.add("4");
         hours.add("5");
@@ -144,6 +157,9 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 		hours5.setAdapter(hoursAdapter);
 		hours6.setAdapter(hoursAdapter);
 		hours7.setAdapter(hoursAdapter);
+		hours8.setAdapter(hoursAdapter);
+		hours9.setAdapter(hoursAdapter);
+		hours10.setAdapter(hoursAdapter);
 		//Spinner Drop down degrees
         List<String> degree = new ArrayList<String>();
         degree.add("A");
@@ -169,7 +185,10 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
        degree4.setAdapter(degreeAdapter);
        degree5.setAdapter(degreeAdapter);
        degree6.setAdapter(degreeAdapter);
-       degree7.setAdapter(degreeAdapter);
+	   degree7.setAdapter(degreeAdapter);
+	   degree8.setAdapter(degreeAdapter);
+	   degree9.setAdapter(degreeAdapter);
+	   degree10.setAdapter(degreeAdapter);
 
 		switch (course) {
 			case 1:
@@ -185,6 +204,12 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 				hours6.setVisibility(View.GONE);
 				degree7.setVisibility(View.GONE);
 				hours7.setVisibility(View.GONE);
+				degree8.setVisibility(View.GONE);
+				hours8.setVisibility(View.GONE);
+				degree9.setVisibility(View.GONE);
+				hours9.setVisibility(View.GONE);
+				degree10.setVisibility(View.GONE);
+				hours10.setVisibility(View.GONE);
 				break;
 
 			case 2:
@@ -199,6 +224,12 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 				hours6.setVisibility(View.GONE);
 				degree7.setVisibility(View.GONE);
 				hours7.setVisibility(View.GONE);
+				degree8.setVisibility(View.GONE);
+				hours8.setVisibility(View.GONE);
+				degree9.setVisibility(View.GONE);
+				hours9.setVisibility(View.GONE);
+				degree10.setVisibility(View.GONE);
+				hours10.setVisibility(View.GONE);
 				break;
 			case 3:
 
@@ -210,6 +241,12 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 				hours6.setVisibility(View.GONE);
 				degree7.setVisibility(View.GONE);
 				hours7.setVisibility(View.GONE);
+				degree8.setVisibility(View.GONE);
+				hours8.setVisibility(View.GONE);
+				degree9.setVisibility(View.GONE);
+				hours9.setVisibility(View.GONE);
+				degree10.setVisibility(View.GONE);
+				hours10.setVisibility(View.GONE);
 				break;
 			case 4:
 
@@ -219,6 +256,12 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 				hours6.setVisibility(View.GONE);
 				degree7.setVisibility(View.GONE);
 				hours7.setVisibility(View.GONE);
+				degree8.setVisibility(View.GONE);
+				hours8.setVisibility(View.GONE);
+				degree9.setVisibility(View.GONE);
+				hours9.setVisibility(View.GONE);
+				degree10.setVisibility(View.GONE);
+				hours10.setVisibility(View.GONE);
 				break;
 			case 5:
 
@@ -226,12 +269,40 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 				hours6.setVisibility(View.GONE);
 				degree7.setVisibility(View.GONE);
 				hours7.setVisibility(View.GONE);
+				degree8.setVisibility(View.GONE);
+				hours8.setVisibility(View.GONE);
+				degree9.setVisibility(View.GONE);
+				hours9.setVisibility(View.GONE);
+				degree10.setVisibility(View.GONE);
+				hours10.setVisibility(View.GONE);
 				break;
 			case 6:
 				degree7.setVisibility(View.GONE);
 				hours7.setVisibility(View.GONE);
+				degree8.setVisibility(View.GONE);
+				hours8.setVisibility(View.GONE);
+				degree9.setVisibility(View.GONE);
+				hours9.setVisibility(View.GONE);
+				degree10.setVisibility(View.GONE);
+				hours10.setVisibility(View.GONE);
 				break;
 			case 7:
+				degree8.setVisibility(View.GONE);
+				hours8.setVisibility(View.GONE);
+				degree9.setVisibility(View.GONE);
+				hours9.setVisibility(View.GONE);
+				degree10.setVisibility(View.GONE);
+				hours10.setVisibility(View.GONE);
+				break;
+			case 8:
+				degree9.setVisibility(View.GONE);
+				hours9.setVisibility(View.GONE);
+				degree10.setVisibility(View.GONE);
+				hours10.setVisibility(View.GONE);
+			case 9:
+				degree10.setVisibility(View.GONE);
+				hours10.setVisibility(View.GONE);
+			case 10:
 				break;
 			default:
 				Toast.makeText(getApplicationContext(),"There is error, try again!",Toast.LENGTH_LONG).show();
@@ -247,15 +318,23 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 
 			@Override
 			public void onClick(View v) {
-
 				gpa = gn.SemesterGpa(sum / hsum);
-
-
 				d.setMaximumFractionDigits(2);
+				AlertDialog semester_gpa = new AlertDialog.Builder(Gpa.this).create();
+				semester_gpa.setTitle(R.string.semester_gpa);
+				String msg = getResources().getString(R.string.your_semester_gpa) +" "+ d.format(gpa)
+						+ "\n" + getResources().getString(R.string.total_hours)+" "+ + hsum;
+				semester_gpa.setMessage(msg);
+				semester_gpa.setButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(final DialogInterface ok, final int which) {
+						ok.cancel();
+					}
+				});
+				semester_gpa.show();
 
 
-				Toast.makeText(getBaseContext(), getResources().getString(R.string.your_semester_gpa) +" "+ d.format(gpa)
-						+ "\n" + getResources().getString(R.string.total_hours)+" "+ + hsum, Toast.LENGTH_LONG).show();
 
 
 			}
@@ -357,16 +436,18 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 		case R.id.spinner2:
 			String h1=parent.getItemAtPosition(position).toString();
 
-            if(h1.equals("2"))hu1=2;
-            else if(h1.equals("3"))hu1=3;
+            if(h1.equals("1"))hu1=1;
+			else if(h1.equals("2"))hu1=2;
+			else if(h1.equals("3"))hu1=3;
             else if(h1.equals("4"))hu1=4;
             else if(h1.equals("5"))hu1=5;
 			break;
 		case R.id.spinner4:
 			String h2=parent.getItemAtPosition(position).toString();
 
-            if(h2.equals("2"))hu2=2;
-            else if(h2.equals("3"))hu2=3;
+            if(h2.equals("1"))hu2=1;
+			else if(h2.equals("2"))hu2=2;
+			else if(h2.equals("3"))hu2=3;
             else if(h2.equals("4"))hu2=4;
             else if(h2.equals("5"))hu2=5;
 			break;
@@ -390,8 +471,9 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 		case R.id.spinner6:
          String h3=parent.getItemAtPosition(position).toString();
 
-            if(h3.equals("2"))hu3=2;
-            else if(h3.equals("3"))hu3=3;
+            if(h3.equals("1"))hu3=1;
+			else if(h3.equals("2"))hu3=2;
+			else if(h3.equals("3"))hu3=3;
             else if(h3.equals("4"))hu3=4;
             else if(h3.equals("5"))hu3=5;
 			break;
@@ -413,8 +495,9 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 		case R.id.spinner8:
             String h4=parent.getItemAtPosition(position).toString();
 
-            if(h4.equals("2"))hu4=2;
-            else if(h4.equals("3"))hu4=3;
+            if(h4.equals("1"))hu4=1;
+			else if(h4.equals("2"))hu4=2;
+			else if(h4.equals("3"))hu4=3;
             else if(h4.equals("4"))hu4=4;
             else if(h4.equals("5"))hu4=5;
 			break;
@@ -436,8 +519,9 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 		case R.id.spinner10:
             String h5=parent.getItemAtPosition(position).toString();
 
-            if(h5.equals("2"))hu5=2;
-            else if(h5.equals("3"))hu5=3;
+            if(h5.equals("1"))hu5=1;
+			else if(h5.equals("2"))hu5=2;
+			else if(h5.equals("3"))hu5=3;
             else if(h5.equals("4"))hu5=4;
             else if(h5.equals("5"))hu5=5;
 			break;
@@ -459,8 +543,9 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 		case R.id.spinner12:
             String h6=parent.getItemAtPosition(position).toString();
 
-            if(h6.equals("2"))hu6=2;
-            else if(h6.equals("3"))hu6=3;
+            if(h6.equals("1"))hu6=1;
+			else if(h6.equals("2"))hu6=2;
+			else if(h6.equals("3"))hu6=3;
             else if(h6.equals("4"))hu6=4;
             else if(h6.equals("5"))hu6=5;
 			break;
@@ -482,11 +567,86 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 		case R.id.spinner14:
             String h7=parent.getItemAtPosition(position).toString();
 			
-			if(h7.equals("2"))hu7=2;
+			if(h7.equals("1"))hu7=1;
+			else if(h7.equals("2"))hu7=2;
 			else if(h7.equals("3"))hu7=3;
 			else if(h7.equals("4"))hu7=4;
 			else if(h7.equals("5"))hu7=5;
 			break;
+
+			case R.id.spinner15:
+				String d8=parent.getItemAtPosition(position).toString();
+
+				if(d8.equals("A"))dg8=4;
+				else if(d8.equals("A-"))dg8=3.7;
+				else if(d8.equals("B+"))dg8=3.3;
+				else if(d8.equals("B"))dg8=3;
+				else if(d8.equals("B-"))dg8=2.7;
+				else if(d8.equals("C+"))dg8=2.3;
+				else if(d8.equals("C"))dg8=2;
+				else if(d8.equals("C-"))dg8=1.7;
+				else if(d8.equals("D+"))dg8=1.3;
+				else if(d8.equals("D"))dg8=1;
+				else if(d8.equals("F"))dg8=0;
+				break;
+			case R.id.spinner16:
+				String h8=parent.getItemAtPosition(position).toString();
+
+				if(h8.equals("1"))hu8=1;
+				else if(h8.equals("2"))hu8=2;
+				else if(h8.equals("3"))hu8=3;
+				else if(h8.equals("4"))hu8=4;
+				else if(h8.equals("5"))hu8=5;
+				break;
+
+			case R.id.spinner17:
+				String d9=parent.getItemAtPosition(position).toString();
+
+				if(d9.equals("A"))dg9=4;
+				else if(d9.equals("A-"))dg9=3.7;
+				else if(d9.equals("B+"))dg9=3.3;
+				else if(d9.equals("B"))dg9=3;
+				else if(d9.equals("B-"))dg9=2.7;
+				else if(d9.equals("C+"))dg9=2.3;
+				else if(d9.equals("C"))dg9=2;
+				else if(d9.equals("C-"))dg9=1.7;
+				else if(d9.equals("D+"))dg9=1.3;
+				else if(d9.equals("D"))dg9=1;
+				else if(d9.equals("F"))dg9=0;
+				break;
+			case R.id.spinner18:
+				String h9=parent.getItemAtPosition(position).toString();
+
+				if(h9.equals("1"))hu9=1;
+				else if(h9.equals("2"))hu9=2;
+				else if(h9.equals("3"))hu9=3;
+				else if(h9.equals("4"))hu9=4;
+				else if(h9.equals("5"))hu9=5;
+				break;
+			case R.id.spinner19:
+				String d10=parent.getItemAtPosition(position).toString();
+
+				if(d10.equals("A"))dg10=4;
+				else if(d10.equals("A-"))dg10=3.7;
+				else if(d10.equals("B+"))dg10=3.3;
+				else if(d10.equals("B"))dg10=3;
+				else if(d10.equals("B-"))dg10=2.7;
+				else if(d10.equals("C+"))dg10=2.3;
+				else if(d10.equals("C"))dg10=2;
+				else if(d10.equals("C-"))dg10=1.7;
+				else if(d10.equals("D+"))dg10=1.3;
+				else if(d10.equals("D"))dg10=1;
+				else if(d10.equals("F"))dg10=0;
+				break;
+			case R.id.spinner20:
+				String h10=parent.getItemAtPosition(position).toString();
+
+				if(h10.equals("1"))hu10=1;
+				else if(h10.equals("2"))hu10=2;
+				else if(h10.equals("3"))hu10=3;
+				else if(h10.equals("4"))hu10=4;
+				else if(h10.equals("5"))hu10=5;
+				break;
 
 			default:
 				Toast.makeText(getBaseContext(),"Nothing selected", Toast.LENGTH_LONG).show();
@@ -550,6 +710,45 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 			sevnth=dg7*hu7;
 			hsum=hu1+hu2+hu3+hu4+hu5+hu6+hu7;
 			sum=first+second+third+forth+fivee+sixth+sevnth;
+		}
+		if(course == 8){
+			first = dg1 * hu1;
+			second=dg2*hu2;
+			third=dg3*hu3;
+			forth=dg4*hu4;
+			fivee=dg5*hu5;
+			sixth=dg6*hu6;
+			sevnth=dg7*hu7;
+			eigth=dg8*hu8;
+			hsum=hu1+hu2+hu3+hu4+hu5+hu6+hu7+hu8;
+			sum=first+second+third+forth+fivee+sixth+sevnth+eigth;
+		}
+		if(course == 9){
+			first = dg1 * hu1;
+			second=dg2*hu2;
+			third=dg3*hu3;
+			forth=dg4*hu4;
+			fivee=dg5*hu5;
+			sixth=dg6*hu6;
+			sevnth=dg7*hu7;
+			eigth=dg8*hu8;
+			nine=dg9*hu9;
+			hsum=hu1+hu2+hu3+hu4+hu5+hu6+hu7+hu8+hu9;
+			sum=first+second+third+forth+fivee+sixth+sevnth+eigth+nine;
+		}
+		if(course == 10){
+			first = dg1 * hu1;
+			second=dg2*hu2;
+			third=dg3*hu3;
+			forth=dg4*hu4;
+			fivee=dg5*hu5;
+			sixth=dg6*hu6;
+			sevnth=dg7*hu7;
+			eigth=dg8*hu8;
+			nine=dg9*hu9;
+			ten=dg10*hu10;
+			hsum=hu1+hu2+hu3+hu4+hu5+hu6+hu7+hu8+hu9+hu10;
+			sum=first+second+third+forth+fivee+sixth+sevnth+eigth+nine+ten;
 		}
 
 		}
