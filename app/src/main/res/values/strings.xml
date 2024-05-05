@@ -51,4 +51,8 @@
     <string name="big_gpa">المعدل أكبر من 4.0، يجب أن يكون في حدود 4.0</string>
     <string name="repeated">حساب المعدل في حالة إعادة المواد</string>
     <string name="how_many_courses_repeated">عدد المواد المعاده:</string>
+    <string name="rate_app">قيِم </string>
+    <string name="like_app">إذا كنت تستفيد من تطبيقنا الرجاء أخذ لحظة لتقييم تطبيقنا على الماركت</string>
+    <string name="remaind_me_later">ذكرني لاحقا</string>
+    <string name="no_thanks">لا شكرا</string>
 </resources>

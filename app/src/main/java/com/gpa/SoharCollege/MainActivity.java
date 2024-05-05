@@ -18,6 +18,7 @@ import android.text.style.TypefaceSpan;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ShareActionProvider;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
@@ -33,7 +34,10 @@ public class MainActivity extends AppCompatActivity {
     ImageView img1, img2,img3,img4,img5,img6;
     TextView txt1, txt2,txt3,txt4,txt5,txt6;
     GeneralFunctions gn = new GeneralFunctions();
-	@SuppressWarnings("deprecation")
+
+    private ShareActionProvider mShareActionProvider;
+
+    @SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("_______" + e.getMessage() + "___________________");
         }
 
+        AppRatter.app_launched(this);
         txt1 = (TextView) findViewById(R.id.calculate);
         txt2 = (TextView) findViewById(R.id.about);
         txt3 = (TextView) findViewById(R.id.rate_us);

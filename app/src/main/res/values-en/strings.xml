@@ -50,6 +50,10 @@
     <string name="big_gpa">Error, Gpa bigger than 4.0!</string>
     <string name="repeated">Calculate Gpa after repeated courses</string>
     <string name="how_many_courses_repeated">Total repeated courses:</string>
+    <string name="rate_app">Rate </string>
+    <string name="like_app">If you like our app, take seconds to rate us on google play</string>
+    <string name="remaind_me_later">Remind me later</string>
+    <string name="no_thanks">No thanks</string>
 
 
 </resources>
