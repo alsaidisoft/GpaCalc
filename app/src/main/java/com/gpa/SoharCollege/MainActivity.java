@@ -218,8 +218,8 @@ public class MainActivity extends AppCompatActivity {
 
                     Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                             "mailto", "saeed.alsaidi.developer@gmail.com", null));
-                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject: GPA calculator com.SoharCollege");
-                    emailIntent.putExtra(Intent.EXTRA_TEXT, "Body: ");
+                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject: GPA calculator com.gpa.SoharCollege");
+                    emailIntent.putExtra(Intent.EXTRA_TEXT, "Body:");
                     startActivity(Intent.createChooser(emailIntent, getResources().getString(R.string.contact_us)));
                 } catch (Exception email) {
                     email.printStackTrace();

@@ -362,13 +362,13 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
                         String msg = "";
 
 
-                            if (genralNewGpa > 3.50) msg = getResources().getString(R.string.excellent);
-                            else if (genralNewGpa > 3.00 && genralNewGpa < 3.49) msg = getResources().getString(R.string.very_good);
-                            else if (genralNewGpa > 2.50 && genralNewGpa < 2.99) msg = getResources().getString(R.string.good);
-                            else if (genralNewGpa > 2.00 && genralNewGpa < 2.49) msg = getResources().getString(R.string.acceptable);
-                            else if (genralNewGpa > 1.00 && genralNewGpa < 1.99)
+                            if (genralNewGpa >= 3.50) msg = getResources().getString(R.string.excellent);
+                            else if (genralNewGpa >= 3.00 && genralNewGpa <= 3.49) msg = getResources().getString(R.string.very_good);
+                            else if (genralNewGpa >= 2.50 && genralNewGpa <= 2.99) msg = getResources().getString(R.string.good);
+                            else if (genralNewGpa >= 2.00 && genralNewGpa <= 2.49) msg = getResources().getString(R.string.acceptable);
+                            else if (genralNewGpa >= 1.00 && genralNewGpa <= 1.99)
                                 msg = getResources().getString(R.string.under_observation);
-                            else if (genralNewGpa > 0.00 && genralNewGpa < 0.99)
+                            else if (genralNewGpa >= 0.00 && genralNewGpa <= 0.99)
                                 msg = getResources().getString(R.string.under_observation);
 
                             AlertDialog totgpa = new AlertDialog.Builder(Gpa.this).create();

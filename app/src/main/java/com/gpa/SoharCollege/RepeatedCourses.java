@@ -515,16 +515,16 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 						String msg = "";
 
 
-						if (genralNewGpa > 3.50) msg = getResources().getString(R.string.excellent);
-						else if (genralNewGpa > 3.00 && genralNewGpa < 3.49)
+						if (genralNewGpa >= 3.50) msg = getResources().getString(R.string.excellent);
+						else if (genralNewGpa >= 3.00 && genralNewGpa <= 3.49)
 							msg = getResources().getString(R.string.very_good);
-						else if (genralNewGpa > 2.50 && genralNewGpa < 2.99)
+						else if (genralNewGpa >= 2.50 && genralNewGpa <= 2.99)
 							msg = getResources().getString(R.string.good);
-						else if (genralNewGpa > 2.00 && genralNewGpa < 2.49)
+						else if (genralNewGpa >= 2.00 && genralNewGpa <= 2.49)
 							msg = getResources().getString(R.string.acceptable);
-						else if (genralNewGpa > 1.00 && genralNewGpa < 1.99)
+						else if (genralNewGpa >= 1.00 && genralNewGpa <= 1.99)
 							msg = getResources().getString(R.string.under_observation);
-						else if (genralNewGpa > 0.00 && genralNewGpa < 0.99)
+						else if (genralNewGpa >= 0.00 && genralNewGpa <= 0.99)
 							msg = getResources().getString(R.string.under_observation);
 
 						final DecimalFormatSymbols decimalSymbol = new DecimalFormatSymbols(Locale.US);
@@ -537,7 +537,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 						int cr = (int) (credits);
 						int th = Math.abs(totalHourses);
 						int th_cr= cr+th;
-						String masg = getResources().getString(R.string.your_semester_gpa) + d.format(gpa) + "\n"+getResources().getString(R.string.total_hours) + hsum + "\n"+getResources().getString(R.string.general_gpa) + d.format(genralNewGpa) + msg + "\n"+getResources().getString(R.string.total_hours) + th_cr;
+						String masg = getResources().getString(R.string.your_semester_gpa) + d.format(gpa) + "\n"+getResources().getString(R.string.total_hours) + hsum + "\n"+getResources().getString(R.string.general_gpa) + d.format(genralNewGpa) + msg + "\n"+getResources().getString(R.string.total_hours) + cr;
 						totgpa.setMessage(masg);
 
 						totgpa.setButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener() {
