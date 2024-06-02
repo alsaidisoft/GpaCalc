@@ -10,8 +10,8 @@ android {
         applicationId = "com.gpa.SoharCollege"
         minSdk = 24
         targetSdk = 34
-        versionCode = 14
-        versionName = "2.3"
+        versionCode = 16
+        versionName = "2.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

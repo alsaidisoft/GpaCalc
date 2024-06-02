@@ -3,6 +3,7 @@
     <style name="Base.Theme.GpaCalc" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="colorPrimary">@color/brown</item>
         <item name="colorPrimaryVariant">@color/brown_light</item>
         <item name="colorOnPrimary">@color/darkBrown</item>
