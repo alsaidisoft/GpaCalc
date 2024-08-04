@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId = "com.gpa.SoharCollege"
-        minSdk = 24
+        minSdk = 30
         targetSdk = 34
-        versionCode = 16
-        versionName = "2.5"
+        versionCode = 17
+        versionName = "2.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
