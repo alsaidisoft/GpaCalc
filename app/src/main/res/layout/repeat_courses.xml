@@ -305,7 +305,7 @@
                         android:textColor="@color/darkBrown"
                         android:text="@string/total_before_semester_hours" />
                     <EditText
-                        android:layout_width="match_parent"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/editText1"
                         android:textAlignment="center"
@@ -333,7 +333,7 @@
                         android:text="@string/total_before_semester_gpa" />
 
                     <EditText
-                        android:layout_width="match_parent"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/editText2"
                         android:textAlignment="center"
