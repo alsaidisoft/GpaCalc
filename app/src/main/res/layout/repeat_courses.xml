@@ -4,6 +4,7 @@
     android:id="@+id/ScrollView1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="20pt"
     android:background="@color/brown_light">
 
     <RelativeLayout

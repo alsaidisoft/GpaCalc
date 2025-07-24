@@ -4,14 +4,14 @@ plugins {
 
 android {
     namespace = "com.gpa.SoharCollege"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.gpa.SoharCollege"
         minSdk = 30
-        targetSdk = 34
-        versionCode = 18
-        versionName = "2.7"
+        targetSdk = 35
+        versionCode = 21
+        versionName = "2.10"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
