@@ -25,13 +25,16 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.google.android.material.card.MaterialCardView;
+
 import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
 	
 
-    ImageView img1, img2,img3,img4,img5,img6;
+    //ImageView img1, img2,img3,img4,img5,img6;
+    MaterialCardView card1, card2,card3,card4,card5,card6;
     TextView txt1, txt2,txt3,txt4,txt5,txt6;
     GeneralFunctions gn = new GeneralFunctions();
 
@@ -79,13 +82,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        img1 =(ImageView) findViewById(R.id.img1);
-        img2 =(ImageView) findViewById(R.id.img2);
+        card1 =(MaterialCardView) findViewById(R.id.card1);
+        card2 =(MaterialCardView) findViewById(R.id.card2);
+        card3 =(MaterialCardView) findViewById(R.id.card3);
+        card4 =(MaterialCardView) findViewById(R.id.card4);
+        card5 =(MaterialCardView) findViewById(R.id.card5);
+        card6 =(MaterialCardView) findViewById(R.id.card6);
+        /*img2 =(ImageView) findViewById(R.id.img2);
         img3 =(ImageView) findViewById(R.id.img3);
         img4 =(ImageView) findViewById(R.id.img4);
         img5 =(ImageView) findViewById(R.id.img5);
-        img6 =(ImageView) findViewById(R.id.img6);
-        img1.setOnClickListener(new View.OnClickListener() {
+        img6 =(ImageView) findViewById(R.id.img6);*/
+        card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder b = new AlertDialog.Builder(MainActivity.this);
@@ -140,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        img2.setOnClickListener(new View.OnClickListener() {
+        card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -171,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-		img3.setOnClickListener(new View.OnClickListener() {
+		card3.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -191,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
                 alert.show();
             }
 		});
-        img4.setOnClickListener(new View.OnClickListener() {
+        card4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent share = new Intent(Intent.ACTION_SEND);
@@ -203,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(share, getResources().getText(R.string.send_to)));
             }
         });
-        img5.setOnClickListener(new View.OnClickListener() {
+        card5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -211,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        img6.setOnClickListener(new View.OnClickListener() {
+        card6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {

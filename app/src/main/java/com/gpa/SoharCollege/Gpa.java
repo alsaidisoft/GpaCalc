@@ -1,6 +1,5 @@
 package com.gpa.SoharCollege;
 
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
@@ -18,6 +17,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -47,8 +47,10 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gpa_calculator);
-		ActionBar actionBar = getActionBar();
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		ActionBar actionBar = getSupportActionBar();
+		if (actionBar != null) {
+			actionBar.setDisplayHomeAsUpEnabled(true);
+		}
 		try {
 
 			gn.setCustomActionBar(this, this.getSupportActionBar());
@@ -142,8 +144,9 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 		hours.add("2");
         hours.add("3");
         hours.add("4");
-        hours.add("5");
-		
+		hours.add("5");
+		hours.add("6");
+
 		//creating adapter for spinner
 		ArrayAdapter<String> hoursAdapter=new ArrayAdapter<String>(this, 
 		android.R.layout.simple_spinner_item,hours);
@@ -440,7 +443,8 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 			else if(h1.equals("2"))hu1=2;
 			else if(h1.equals("3"))hu1=3;
             else if(h1.equals("4"))hu1=4;
-            else if(h1.equals("5"))hu1=5;
+			else if(h1.equals("5"))hu1=5;
+			else if(h1.equals("6"))hu1=6;
 			break;
 		case R.id.spinner4:
 			String h2=parent.getItemAtPosition(position).toString();
@@ -449,7 +453,8 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 			else if(h2.equals("2"))hu2=2;
 			else if(h2.equals("3"))hu2=3;
             else if(h2.equals("4"))hu2=4;
-            else if(h2.equals("5"))hu2=5;
+			else if(h2.equals("5"))hu2=5;
+			else if(h2.equals("6"))hu2=6;
 			break;
 			
 		case R.id.spinner5:
@@ -475,7 +480,8 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 			else if(h3.equals("2"))hu3=2;
 			else if(h3.equals("3"))hu3=3;
             else if(h3.equals("4"))hu3=4;
-            else if(h3.equals("5"))hu3=5;
+			else if(h3.equals("5"))hu3=5;
+			else if(h3.equals("6"))hu3=6;
 			break;
 		case R.id.spinner7:
 			 String d4=parent.getItemAtPosition(position).toString();
@@ -499,7 +505,8 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 			else if(h4.equals("2"))hu4=2;
 			else if(h4.equals("3"))hu4=3;
             else if(h4.equals("4"))hu4=4;
-            else if(h4.equals("5"))hu4=5;
+			else if(h4.equals("5"))hu4=5;
+			else if(h4.equals("6"))hu4=6;
 			break;
 		case R.id.spinner9:
 			String d5=parent.getItemAtPosition(position).toString();
@@ -523,7 +530,8 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 			else if(h5.equals("2"))hu5=2;
 			else if(h5.equals("3"))hu5=3;
             else if(h5.equals("4"))hu5=4;
-            else if(h5.equals("5"))hu5=5;
+			else if(h5.equals("5"))hu5=5;
+			else if(h5.equals("6"))hu5=6;
 			break;
 		case R.id.spinner11:
          String d6=parent.getItemAtPosition(position).toString();
@@ -547,7 +555,8 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 			else if(h6.equals("2"))hu6=2;
 			else if(h6.equals("3"))hu6=3;
             else if(h6.equals("4"))hu6=4;
-            else if(h6.equals("5"))hu6=5;
+			else if(h6.equals("5"))hu6=5;
+			else if(h6.equals("6"))hu6=6;
 			break;
 		case R.id.spinner13:
           String d7=parent.getItemAtPosition(position).toString();
@@ -572,6 +581,7 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 			else if(h7.equals("3"))hu7=3;
 			else if(h7.equals("4"))hu7=4;
 			else if(h7.equals("5"))hu7=5;
+			else if(h7.equals("6"))hu7=6;
 			break;
 
 			case R.id.spinner15:
@@ -597,6 +607,7 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 				else if(h8.equals("3"))hu8=3;
 				else if(h8.equals("4"))hu8=4;
 				else if(h8.equals("5"))hu8=5;
+				else if(h8.equals("6"))hu8=6;
 				break;
 
 			case R.id.spinner17:
@@ -622,6 +633,7 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 				else if(h9.equals("3"))hu9=3;
 				else if(h9.equals("4"))hu9=4;
 				else if(h9.equals("5"))hu9=5;
+				else if(h9.equals("6"))hu9=6;
 				break;
 			case R.id.spinner19:
 				String d10=parent.getItemAtPosition(position).toString();
@@ -646,6 +658,7 @@ public class Gpa extends AppCompatActivity implements OnItemSelectedListener {
 				else if(h10.equals("3"))hu10=3;
 				else if(h10.equals("4"))hu10=4;
 				else if(h10.equals("5"))hu10=5;
+				else if(h10.equals("6"))hu10=6;
 				break;
 
 			default:

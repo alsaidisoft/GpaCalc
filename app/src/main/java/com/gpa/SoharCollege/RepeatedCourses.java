@@ -179,6 +179,7 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 		hourses.add("3");
 		hourses.add("4");
 		hourses.add("5");
+		hourses.add("6");
 
 
 		//creating adapter for spinner
@@ -582,7 +583,8 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				else if (h1.equals("2")) hu1 = 2;
 				else if (h1.equals("3")) hu1 = 3;
 				else if (h1.equals("4")) hu1 = 4;
-				else if (h1.equals("5")) hu1 = 5;
+				 else if (h1.equals("5")) hu1 = 5;
+				 else if (h1.equals("6")) hu1 = 6;
 				break;
 
 			case R.id.spinner4:
@@ -591,7 +593,8 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				else if (h2.equals("2")) hu2 = 2;
 				else if (h2.equals("3")) hu2 = 3;
 				else if (h2.equals("4")) hu2 = 4;
-				else if (h2.equals("5")) hu2 = 5;
+				 else if (h2.equals("5")) hu2 = 5;
+				 else if (h2.equals("6")) hu2 = 6;
 				break;
 
 			case R.id.spinner7:
@@ -600,7 +603,8 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				else if (h3.equals("2")) hu3 = 2;
 				else if (h3.equals("3")) hu3 = 3;
 				else if (h3.equals("4")) hu3 = 4;
-				else if (h3.equals("5")) hu3 = 5;
+				 else if (h3.equals("5")) hu3 = 5;
+				 else if (h3.equals("6")) hu3 = 6;
 				break;
 
 			case R.id.spinner10:
@@ -609,7 +613,8 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				else if (h4.equals("2")) hu4 = 2;
 				else if (h4.equals("3")) hu4 = 3;
 				else if (h4.equals("4")) hu4 = 4;
-				else if (h4.equals("5")) hu4 = 5;
+				 else if (h4.equals("5")) hu4 = 5;
+				 else if (h4.equals("6")) hu4 = 6;
 				break;
 
 			case R.id.spinner13:
@@ -618,7 +623,8 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				else if (h5.equals("2")) hu5 = 2;
 				else if (h5.equals("3")) hu5 = 3;
 				else if (h5.equals("4")) hu5 = 4;
-				else if (h5.equals("5")) hu5 = 5;
+				 else if (h5.equals("5")) hu5 = 5;
+				 else if (h5.equals("6")) hu5 = 6;
 				break;
 
 			case R.id.spinner16:
@@ -627,7 +633,8 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				else if (h6.equals("2")) hu6 = 2;
 				else if (h6.equals("3")) hu6 = 3;
 				else if (h6.equals("4")) hu6 = 4;
-				else if (h6.equals("5")) hu6 = 5;
+				 else if (h6.equals("5")) hu6 = 5;
+				 else if (h6.equals("6")) hu6 = 6;
 				break;
 			case R.id.spinner19:
 				String h7 = parent.getItemAtPosition(position).toString();
@@ -635,7 +642,8 @@ public class RepeatedCourses extends AppCompatActivity implements OnItemSelected
 				else if (h7.equals("2")) hu7 = 2;
 				else if (h7.equals("3")) hu7 = 3;
 				else if (h7.equals("4")) hu7 = 4;
-				else if (h7.equals("5")) hu7 = 5;
+				 else if (h7.equals("5")) hu7 = 5;
+				 else if (h7.equals("6")) hu7 = 6;
 				break;
 
 			case R.id.spinner2:

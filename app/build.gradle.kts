@@ -4,14 +4,14 @@ plugins {
 
 android {
     namespace = "com.gpa.SoharCollege"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.gpa.SoharCollege"
         minSdk = 30
         targetSdk = 35
-        versionCode = 21
-        versionName = "2.10"
+        versionCode = 22
+        versionName = "3.01"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -31,7 +31,8 @@ android {
 dependencies {
 
     implementation(libs.appcompat)
-    implementation ("com.android.support:appcompat-v7:27.0.0")
+    implementation (libs.appcompat.v7)
+    implementation (libs.material.v1120) // or latest
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)

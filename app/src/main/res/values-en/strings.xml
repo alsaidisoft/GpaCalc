@@ -54,6 +54,11 @@
     <string name="like_app">If you like our app, take seconds to rate us on google play</string>
     <string name="remaind_me_later">Remind me later</string>
     <string name="no_thanks">No thanks</string>
-
+    <string name="calculate_subtitle">Perform complex calculations easily</string>
+    <string name="developer_subtitle">Meet our amazing development team</string>
+    <string name="info_subtitle">App calculation details</string>
+    <string name="share_subtitle">Share the app with friends</string>
+    <string name="rate_subtitle">Rate us on the Play Store</string>
+    <string name="contact_us_subtitle">Get in touch with us</string>
 
 </resources>

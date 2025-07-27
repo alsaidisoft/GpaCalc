@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.GpaCalc" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Base.Theme.GpaCalc" parent="Theme.Material3.DynamicColors.Light">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
@@ -9,8 +9,14 @@
         <item name="colorOnPrimary">@color/darkBrown</item>
         <!-- Status bar color. -->
         <item name="actionBarTheme">@style/MyThemeOverlay_Toolbar</item>
-        <item name="android:statusBarColor">?attr/colorOnPrimary</item>
+
         <item name="android:windowLightStatusBar">true</item>
+        <!-- Make window background same as splash background -->
+        <item name="android:windowBackground">@color/brown_light</item>
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/brown_light</item>
+        <!-- Optional: navigation bar color -->
+        <item name="android:navigationBarColor">@color/brown</item>
     </style>
     <style name="Theme.GpaCalc" parent="Base.Theme.GpaCalc">
     </style>

@@ -1,5 +1,6 @@
 [versions]
-agp = "8.3.1"
+agp = "8.4.1"
+appcompatV7 = "28.0.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
@@ -9,8 +10,10 @@ activity = "1.8.0"
 constraintlayout = "2.1.4"
 gridlayout = "1.0.0"
 identityCredential = "20231002"
+materialVersion = "1.12.0"
 
 [libraries]
+appcompat-v7 = { module = "com.android.support:appcompat-v7", version.ref = "appcompatV7" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -20,6 +23,7 @@ activity = { group = "androidx.activity", name = "activity", version.ref = "acti
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 gridlayout = { group = "androidx.gridlayout", name = "gridlayout", version.ref = "gridlayout" }
 identity-credential = { group = "com.android.identity", name = "identity-credential", version.ref = "identityCredential" }
+material-v1120 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

@@ -55,5 +55,9 @@
     <string name="like_app">إذا كنت تستفيد من تطبيقنا الرجاء أخذ لحظة لتقييم تطبيقنا على الماركت</string>
     <string name="remaind_me_later">ذكرني لاحقا</string>
     <string name="no_thanks">لا شكرا</string>
-    <string name="todo">TODO</string>
-</resources>
+    <string name="calculate_subtitle">أنجز حساب معدلك بسهولة</string>
+    <string name="developer_subtitle">تعرف على مطور البرنامج</string>
+    <string name="info_subtitle">تفاصيل الحساب في التطبيق</string>
+    <string name="share_subtitle">شارك التطبيق مع أصدقائك</string>
+    <string name="rate_subtitle">قيمنا في جوجل بلاي</string>
+    <string name="contact_us_subtitle">تواصل معنا عبر الإيميل</string></resources>

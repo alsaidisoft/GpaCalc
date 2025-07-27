@@ -7,4 +7,23 @@
     <color name="brown_light">#E6D5AD</color>
     <color name="white">#FFFFFF</color>
     <color name="Black">#000000</color>
+    <color name="gradientStart1">#FF6F91</color>
+    <color name="gradientEnd1">#FF9671</color>
+
+    <color name="gradientStart2">#3F72AF</color>
+    <color name="gradientEnd2">#112D4E</color>
+
+    <color name="gradientStart3">#F9F871</color>
+    <color name="gradientEnd3">#F9A871</color>
+
+    <color name="gradientStart4">#6A0572</color>
+    <color name="gradientEnd4">#AB83A1</color>
+
+    <color name="gradientStart5">#F45D4C</color>
+    <color name="gradientEnd5">#F99B7D</color>
+
+    <color name="gradientStart6">#11998E</color>
+    <color name="gradientEnd6">#38EF7D</color>
+
+
 </resources>
